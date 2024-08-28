@@ -23,6 +23,14 @@ html {
     4. Kiểu dáng (Kiểu chữ, tròn, vuông,...)
 */
 
+.clear {
+    clear: both;
+}
+
+.text-white {
+    color: #fff !important;
+}
+
 #main {
 
 }
@@ -159,9 +167,156 @@ html {
 
 
 #content {
-
+    
 }
 
+#content .content-section {
+    width: 800px;
+    margin: 0 auto;
+    padding: 64px 16px;
+}
+
+#content .section-heading {
+    margin: 10px 0;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 4px;
+}
+
+#content .section-sub-heading {
+    margin: 15px 0;
+    font-size: 15px;
+    text-align: center;
+    font-style: italic;
+}
+
+#content .about-text {
+    font-size: 15px;
+    margin: 15px 0;
+    text-align: justify;
+    line-height: 1.4rem;
+}
+
+#content .member-list {
+    padding: 32px 0;
+    /* overflow: hidden; */
+}
+
+#content .member-item {
+    float: left;
+    width: calc(100%/3);
+    /* width: 33.33333%; */
+    text-align: center;
+}
+
+#content .member-name {
+    font-size: 15px;
+    margin: 15px 0;
+}
+
+#content .member-image {
+    width: 154px;
+    border-radius: 4px;
+}
+
+/* Tour Section */
+.tour-section {
+    background-color: #000;
+}
+
+.tickets-list {
+    background-color: #fff;
+    margin-top: 40px;
+}
+
+/* Set font-size đầu tiên vì font-size ảnh hưởng đến chiều cao */
+.tickets-list li {
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+    color: #757575;
+    list-style: none;
+}
+
+.tickets-list .sold-out {
+    background-color: #f44336;
+    padding: 3px 8px;
+    margin-left: 16px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.tickets-list .quantity {
+    width: 24px;
+    height: 24px;
+    float: right;
+    background-color: #000;
+    padding: 0 8px;
+    margin-right: 16px;
+    font-size: 15px;
+    line-height: 24px;
+    border-radius: 50%;
+    margin-top: -3px;
+}
+
+/* Places */
+.places-list {
+    margin: 32px -8px 0;
+}
+
+.place-item {
+    float: left;
+    width: 33.33333%;
+    padding: 0 8px;
+}
+
+.place-img {
+    width: 100%;
+    display: block;
+}
+
+.place-img:hover {
+    opacity: 0.6;
+}
+
+.place-body {
+    background-color: #fff;
+    padding: 16px;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.place-heading {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.place-time {
+    margin: 15px 0;
+    color: #757575;
+}
+
+.place-desc {
+    margin: 15px 0;
+}
+
+.place-buy-btn {
+    display: inline-block;
+    padding: 12px 16px;
+    margin: 16px 0;
+    background-color: #000;
+    text-decoration: none;
+    color: #fff;
+}
+
+.place-buy-btn:hover {
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+}
+
+/* Footer Section */
 #footer {
 
 }
