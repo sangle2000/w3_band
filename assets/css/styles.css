@@ -7,6 +7,7 @@
 }
 
 html {
+    scroll-behavior: smooth; /* Hành vi cuộn */
     font-family: Helvetica, Arial, sans-serif;
 }
 
@@ -23,6 +24,8 @@ html {
     4. Kiểu dáng (Kiểu chữ, tròn, vuông,...)
 */
 
+/* Common */
+
 .clear {
     clear: both;
 }
@@ -30,6 +33,49 @@ html {
 .text-white {
     color: #fff !important;
 }
+
+.mt-4 {
+    margin-top: 4px !important;
+}
+
+.mt-8 {
+    margin-top: 8px !important;
+}
+
+.mt-16 {
+    margin-top: 16px !important;
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-full {
+    width: 100%;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.col-third {
+    width: 33.33333%;
+}
+
+/* Main */
 
 #main {
 
@@ -189,6 +235,7 @@ html {
     font-size: 15px;
     text-align: center;
     font-style: italic;
+    color: #ccc;
 }
 
 #content .about-text {
@@ -308,6 +355,7 @@ html {
     background-color: #000;
     text-decoration: none;
     color: #fff;
+    border: none;
 }
 
 .place-buy-btn:hover {
@@ -321,3 +369,146 @@ html {
 
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-container {
+    background-color: #fff;
+    width: 900px;
+    min-height: 200px;
+    position: relative;
+    animation: modalFadeIn ease 0.5s;
+}
+
+.modal-header {
+    background-color: #009688;
+    color: #fff;
+    height: 129px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.modal-container .modal-icon {
+    margin: 0 16px;
+}
+
+.modal-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    background-color: #f44336;
+}
+
+.modal-body {
+    padding: 16px;
+}
+
+.modal-label {
+    margin-top: 12px;
+}
+
+.modal-input {
+    display: block;
+    font-size: 15px;
+    padding: 8px 8px;
+    border: 1px solid #ccc;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+#buy-ticket {
+    background-color: #009688;
+    border: none;
+    color: #fff;
+    width: 100%;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 16px;
+    cursor: pointer;
+}
+
+#buy-ticket:hover {
+    color: #000;
+    background-color: #ccc;
+}
+
+.modal-footer {
+    padding: 16px;
+    float: right;
+}
+
+.modal-help-link {
+    color: #2196f3;
+}
+
+.modal.open {
+    display: flex;
+}
+
+/* Contact form */
+
+.contact-content {
+    margin: 40px 0;
+}
+
+.contact-info {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.contact-info i[class*="ti-"] {
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-form {
+    font-size: 15px;
+}
+
+.contact-form .form-control {
+    padding: 8px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.contact-submit {
+    float: right;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.contact-submit:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+/* Tạo ra chuyển động mượt mà */
+@keyframes modalFadeIn {
+    from {
+        transform: translateY(-150px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
