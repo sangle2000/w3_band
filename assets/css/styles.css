@@ -364,11 +364,6 @@ html {
     cursor: pointer;
 }
 
-/* Footer Section */
-#footer {
-
-}
-
 .modal {
     display: none;
     position: fixed;
@@ -500,6 +495,43 @@ html {
 
 .contact-submit:hover {
     background-color: #ccc;
+    color: #000;
+}
+
+.map-img {
+    width: 100%;
+    filter: grayscale(50%);
+}
+
+/* Footer Section */
+#footer {
+    padding: 64px 16px;
+    background-color: #f1f1f1;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo i {
+    font-size: 24px;
+    margin: 0 2px;
+    opacity: 0.6;
+}
+
+.footer-logo i:hover {
+    opacity: 0.4;
+}
+
+.footer-text {
+    text-align: center;
+    margin: 24px 0;
+    opacity: 0.6;
+}
+
+.footer-text a {
     color: #000;
 }
 
