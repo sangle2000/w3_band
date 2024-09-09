@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="./assets/css/styles.css">
         <link rel="stylesheet"
             href="./assets/font/themify-icons/themify-icons.css">
+        <link rel="stylesheet" href="./assets/css/responsive.css">
     </head>
     <body>
         <div id="main">
@@ -19,7 +20,7 @@
                     <li><a href="#tour">Tour</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li>
-                        <a href>
+                        <a href="#">
                             More
                             <i class="nav-arrow-down ti-angle-down"></i>
                         </a>
@@ -37,6 +38,10 @@
 
                 <div class="search-btn">
                     <i class="search-icon ti-search"></i>
+                </div>
+
+                <div class="menu-btn">
+                    <i class="menu-icon ti-menu"></i>
                 </div>
 
                 <!-- End Search Button -->
@@ -269,6 +274,10 @@
             const modal_form = document.querySelector(".modal");
             const btn_buy_ticket = document.querySelectorAll(".place-buy-btn");
             const modal_container = document.querySelector(".modal-container");
+            const header = document.getElementById("header");
+            const menu_btn = document.querySelector(".menu-btn");
+
+            var headerHeight = header.clientHeight
 
             for (const buyBtn of btn_buy_ticket){
                     buyBtn.onclick = () => {
@@ -286,6 +295,30 @@
 
             modal_container.onclick = (event) => {
                 event.stopPropagation();
+            }
+
+            menu_btn.onclick = () => {
+                var isClosed = header.clientHeight === headerHeight;
+                if (isClosed){
+                    header.style.height = "auto"
+                } else {
+                    header.style.height = null
+                }
+            }
+
+            // Tự động đóng khi chọn menu
+            var menuItems = document.querySelectorAll('#nav li a[href*="#"]')
+            for (let i = 0; i < menuItems.length; i++) {
+
+                menuItems[i].onclick = (event) => {
+                    var isParentMenu = menuItems[i].nextElementSibling && menuItems[i].nextElementSibling.classList.contains('subnav')
+                    
+                    if (!isParentMenu) {
+                        header.style.height = null
+                    } else {
+                        event.preventDefault();
+                    }
+                }
             }
         </script>
     </body>

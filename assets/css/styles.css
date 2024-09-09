@@ -92,7 +92,7 @@ html {
     z-index: 1;
 }
 
-#header #nav {
+#nav {
     display: inline-block;
 }
 
@@ -156,12 +156,17 @@ html {
 }
 
 /* Khi dùng float thì thẻ sẽ mất tính kế thừa chiều ngang của display block */
-#header .search-btn {
+#header .search-btn,
+#header .menu-btn {
     float: right;
     padding: 0 21px;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
-#header .search-icon {
+#header .search-icon,
+#header .menu-icon {
     color: #fff;
     font-size: 20px;
     line-height: 46px;
@@ -170,6 +175,14 @@ html {
 #header .search-btn:hover {
     background-color: red;
     cursor: pointer;
+}
+
+#header .menu-btn:hover {
+    background-color: #ccc;
+}
+
+#header .menu-btn:hover .menu-icon {
+    color: #000;
 }
 
 #slider {
@@ -218,6 +231,7 @@ html {
 
 #content .content-section {
     width: 800px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 64px 16px;
 }
